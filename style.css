@@ -1,0 +1,50 @@
+.hospitalname{
+font-size: 60px;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+ 	
+}
+
+.welcome{
+	text-align: center;
+	background-color: #E6E6FA;
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+
+ul {
+    list-style-type: none;
+    }
+
+li {
+    display: inline;
+    font-size: 20px;
+}
+
+.navlogin{
+float: right;
+background-color: pink;
+}
+
+.container{
+ text-align: center;
+ letter-spacing: 3px;
+ font-size: 30px;
+ padding: 2em 10em;
+
+}
+
+
+
+
+
+
+/*signup.php*/
+.signup-form{
+	width;400px;
+	margin: 0 auto;
+	padding-top: 30px;
+
+
+}

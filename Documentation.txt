@@ -1,0 +1,59 @@
+
+>>>Creating Database for users on PHPMYADMIN
+
+CREATE TABLE users(
+user_id int(11) not null Auto_Increment Primary key, 
+user_first varchar(256) not null,
+user_last varchar(256) not null,
+user_email varchar(256) not null,
+user_uid varchar(256) not null,
+user_pwd varchar(256) not null,
+)
+
+.........................`
+
+
+<?php
+
+ $dbServername="localhost";
+ $dbUsername="root";
+ $dbPassword="";
+ $dbName="loginsystem";
+
+ $conn= mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+ ?>
+
+created the this file, then I went in php my admin and created logindatabase and then make users table.
+.......................................................
+<?php
+include_once 'includes/db.php';
+
+ ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php 
+	$sql=" select  * From users;";
+	$results=mysqli_query($conn, $sql);
+	$resultCheck=mysqli_num_rows($results);
+	if($resultCheck>0)
+	{
+			while ($row=mysqli_fetch_assoc($results)) {
+				echo $row['user_uid'];
+			}
+	}
+
+
+?>
+</body>
+</html>
+
+It will give the data of the column of user table of login system database.
+
+Basically, all this is extracting data from database on website. You can select all different kind of data from database 
+using this php code.
