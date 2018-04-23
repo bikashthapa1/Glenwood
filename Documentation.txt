@@ -56,4 +56,4 @@ include_once 'includes/db.php';
 It will give the data of the column of user table of login system database.
 
 Basically, all this is extracting data from database on website. You can select all different kind of data from database 
-using this php code.
+using this code
