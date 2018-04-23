@@ -1,58 +1,53 @@
 <?php
 
 if (isset($_POST['submit'])) {
-		include_once 'db.php';
-		$first = mysqli_real_escape_string($conn, $_POST['first']);
-		$last = mysqli_real_escape_string($conn, $_POST['last']);
-		$number = mysqli_real_escape_string($conn, $_POST['number']);
-		$uid = mysqli_real_escape_string($conn, $_POST['uid']);
-		$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+		include_once 'db.inc.php';
+		$first = mysqli_real_escape_string($conn, $_POST['name']);
+		$email = mysqli_real_escape_string($conn, $_POST['email']);
+		$contact = mysqli_real_escape_string($conn, $_POST['phone']);
+		$uid = mysqli_real_escape_string($conn, $_POST['user_id']);
+		$pwd = mysqli_real_escape_string($conn, $_POST['password']);
 
-			if(empty($first) || empty($last) || empty($number) || empty($uid) || empty($pwd))
+			if(empty($first) || empty($contact) || empty($pwd) || empty($email))
 				{
-				header("Location: ../signup.php?signup=empty");
+				header("Location: ../body.php?signup=empty");
 				exit(); 
 			   }
 			   else{
 			   	//check input characters are valid
-					   		if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last) ) {
-					   		header("Location: ../signup.php?signup=invalid");
+					if (!preg_match("/^[a-zA-Z]*$/", $first) ) {
+					   	header("Location: ../body.php?signup=invalid");
 					   		exit();
 					     	} 
 					     	else //check valid email
 					     	{
-					     		if (!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $number)) {
-					     			header("Location: ../signup.php?signup=invalidNumber");
-					   			    exit();
-					     		}
-					     		else
-					     		{
+					     		
 
-					     			$sql="SELECT * FROM users WHERE user_uid='$uid'";
+					     			$sql="SELECT * FROM patient WHERE user_id='$uid'";
 					     			$result=mysqli_query($conn, $sql);
 					     			$resultCheck=mysqli_num_rows($result);
 					     			if($resultCheck >0)
 					     			{
-					     			header("Location: ../signup.php?signup=usertaken");
+					     			header("Location: ../body.php?signup=usertaken");
 					   					exit();	
 					     			}
 					     			else{
 					     					//hashing the password
 					     				 $hashesPw=password_hash($pwd, PASSWORD_DEFAULT);
 					     				 //Insert the user into the database
-					     			   $sql="INSERT INTO users(user_first,user_last, user_number, user_uid, user_pwd) VALUES ('$first','$last', '$number','$uid','$hashesPw' );";
+					     			   $sql="INSERT INTO patient(user_id,user_name,user_contact,user_email,user_password) VALUES ('$uid','$first','$contact','$email','$hashesPw' );";
 					     				 		mysqli_query($conn, $sql);
-					     				 		header("Location: ../signup.php?signup=sucess");
+					     				 		header("Location: ../success.php?signup=sucess");
 					     				 		exit();
 
 					     			}
-					     		}
+					     		
 					     	}
-			   }
+			   		}
 
 }
 else {
-	header("Location: ../signup.php");
+	header("Location: ../body.php");
 	exit();
     }
 ?>

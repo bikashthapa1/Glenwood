@@ -1,50 +1,90 @@
-.hospitalname{
-font-size: 60px;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 2px;
- 	
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Rubik');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
 }
 
-.welcome{
-	text-align: center;
-	background-color: #E6E6FA;
-	font-size: 25px;
-	letter-spacing: 1px;
-}
-
-ul {
-    list-style-type: none;
-    }
-
-li {
-    display: inline;
+nav{
+    height: 80px;
+    padding: 20px 0px;
+    background-color: white;
     font-size: 20px;
+    
 }
 
-.navlogin{
-float: right;
-background-color: pink;
+.nav li{
+    padding: 15px;
+}
+.navbar-brand {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
 }
 
-.container{
- text-align: center;
- letter-spacing: 3px;
- font-size: 30px;
- padding: 2em 10em;
+.navbar-default {
+    background-color: white;
+    border: none;
+    
+}
 
+
+top p{
+    margin-top: 20px;
+}
+
+.frame3 {
+    border-color: rgb(199, 199, 198) #39BCD2;
+    border-image: none;
+    border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    border-style: solid;
+    border-width: 20px;
+    height: 300px;
+    width: 700px;
+    position: absolute;
+    left: 25%;
+    top: 30%;
+}
+
+.frame3 p{
+    font-family: 'Rubik', sans-serif;
 }
 
 
 
+.top {
+    width: 100%;
+    height: 500px;
+    background: url('blur.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+.login{
+margin-top: 40px;
+}
+
+section{
+    margin-top: 100px;
+}
+
+.thumbnail img{
+    height: 200px;
+    widows: 200px;
+}
+
+.caption h3{
+ padding: 0px 20%;
+}
+
+.desc{
+    padding: 15px 30px;
+    font-size: 15px;
+}
 
 
 
-/*signup.php*/
-.signup-form{
-	width;400px;
-	margin: 0 auto;
-	padding-top: 30px;
-
-
+footer div{
+ background-color: gray;   
 }
