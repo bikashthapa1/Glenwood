@@ -32,7 +32,7 @@
         <div id="navbarResponsive" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li >
-              <a href="index.php" data-nav-section="home">
+              <a href="aprofile.php" data-nav-section="home">
                 <span>Home</span>
               </a>
             </li>
@@ -44,8 +44,8 @@
 
   <div class="container">
   <div class="box">
-    <h1>Sign Up Successful.</h1>
-    <p>Please login to view your account.</P>
+    <h1>User Created.</h1>
+    <p>Please login to view user account.</P>
   </div>
 </div>
 </div>

@@ -1,0 +1,41 @@
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  
+			`name` varchar(128) NOT NULL,
+  
+			`pass` varchar(1000) NOT NULL,
+  
+			`email` varchar(128) NOT NULL,
+  
+			`doe` date NOT NULL,
+  
+			`gender` varchar(6) NOT NULL,
+  
+			`phone` varchar(10) NOT NULL,
+  
+			`position` varchar(128) NOT NULL,
+			PRIMARY KEY('id')	
+		
+);
+
+CREATE TABLE `admin` (
+  `ID` int(11) NOT NULL,
+  
+			`name` varchar(128) NOT NULL,
+  
+			`email` varchar(128) NOT NULL,
+  
+			`pass` varchar(1000) NOT NULL,
+			PRIMARY KEY('id')
+		     
+);
+
+CREATE TABLE `profileimg` (
+  `id` int(11) NOT NULL,
+  
+			     `userid` int(11) NOT NULL,
+  
+			     `status` int(11) NOT NULL
+
+			      PRIMARY KEY('id')
+			   );

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css">
   <link rel="stylesheet" href="mystyle.css">
+  
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
 
-          <!-- <a class="navbar-brand" href="index.php">DBMS Project</a> -->
+         <!--  <a class="navbar-brand" href="profile.php">DBMS Project</a> -->
           <button class="navbar-toggle navbar-toggle-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -32,24 +33,19 @@
         <div id="navbarResponsive" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li >
-              <a href="index.php" data-nav-section="home">
+              <a href="profile.php" data-nav-section="home">
                 <span>Home</span>
               </a>
-            </li>
+              </li>
+              
+            <li><a href="includes/logout.inc.php" data-nav-section="work" id="navlogin" name="logout"><span>Logout</span></a></li>
           </ul>
         </div>
       </div>
     </nav>
+    </div>
+<div class="container-fluid">
   
-
-  <div class="container">
-  <div class="box">
-    <h1>Sign Up Successful.</h1>
-    <p>Please login to view your account.</P>
-  </div>
-</div>
-</div>
-  <div class="container-fluid">
     <footer>
       <div class="row">
 
@@ -75,4 +71,4 @@
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
 
 </body>
-</html>
+</html>';
